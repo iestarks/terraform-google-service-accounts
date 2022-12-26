@@ -84,3 +84,9 @@ variable "descriptions" {
   description = "List of descriptions for the created service accounts (elements default to the value of `description`)"
   default     = []
 }
+
+
+variable "env" {
+  type        = string
+  description = "env that is using the service account"
+}
