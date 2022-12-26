@@ -22,7 +22,7 @@ variable "project_id" {
 variable "prefix" {
   type        = string
   description = "Prefix applied to service account names."
-  default     = ""
+  default     = "gravresis"
 }
 
 variable "names" {

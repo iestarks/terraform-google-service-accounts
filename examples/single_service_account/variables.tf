@@ -25,3 +25,10 @@ variable "prefix" {
   default     = ""
 }
 
+
+variable "env" {
+  type        = string
+  description = "env that is using the service account"
+}
+
+

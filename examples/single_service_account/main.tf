@@ -17,10 +17,17 @@
 module "service_accounts" {
   source        = "../.."
   project_id    = var.project_id
-  prefix        = var.prefix
-  names         = ["single-account"]
-  project_roles = ["${var.project_id}=>roles/viewer"]
-  display_name  = "Single Account"
-  description   = "Single Account Description"
+  prefix        = "terraform service account"
+  names         = ["terraform"]
+  project_roles = [
+    
+  "${var.project_id}=>roles/viewer",
+  "${var.project_id}=>roles/storage.admin",
+  "${var.project_id}=>roles/compute.admin"
+
+  ]
+  display_name  = "terraform service account"
+  description   = "Terraform Runs Single Account"
+  env           =  var.env
 }
 

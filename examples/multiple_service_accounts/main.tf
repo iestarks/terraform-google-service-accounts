@@ -27,5 +27,6 @@ module "service_accounts" {
     "${var.project_id}=>roles/viewer",
     "${var.project_id}=>roles/storage.objectViewer",
   ]
+  env            = var.env
 }
 
